@@ -1,0 +1,112 @@
+
+/* =========================================
+   EDUCATION SECTION
+========================================= */
+
+.education {
+  background: transparent;
+  position: relative;
+}
+
+.education-container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.education-heading {
+  margin-bottom: 45px;
+}
+
+.education-heading h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(30px, 4vw, 43px);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+/* Education list */
+
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Education cards */
+
+.education-card,
+.education-list > * {
+  min-width: 0;
+  padding: 30px;
+  border-radius: 13px;
+  background: rgba(7, 19, 34, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover,
+.education-list > *:hover {
+  transform: translateY(-5px);
+}
+
+/* Education icon */
+
+.education-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  color: #8dbaff;
+  background: rgba(57, 127, 224, 0.18);
+  border-radius: 9px;
+  margin-bottom: 20px;
+}
+
+.education-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Institution and qualification */
+
+.education-card h3,
+.education-list h3 {
+  color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.education-card h4,
+.education-list h4 {
+  color: #8dbaff;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* Education description */
+
+.education-card p,
+.education-list p {
+  color: #d0dbe9;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* =========================================
+   EDUCATION RESPONSIVENESS
+========================================= */
+
+@media (max-width: 750px) {
+  .education-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-card,
+  .education-list > * {
+    padding: 23px;
+  }
+}

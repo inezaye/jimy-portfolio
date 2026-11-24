@@ -1,0 +1,127 @@
+
+/* =========================================
+   EXPERIENCE SECTION
+========================================= */
+
+.experience {
+  background: transparent;
+  position: relative;
+}
+
+.experience-container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.experience-heading {
+  margin-bottom: 45px;
+}
+
+.experience-heading h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(30px, 4vw, 43px);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+/* Experience list */
+
+.experience-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Experience cards */
+
+.experience-card,
+.experience-list > * {
+  min-width: 0;
+  min-height: 260px;
+  padding: 28px;
+  border-radius: 13px;
+  background: rgba(7, 19, 34, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover,
+.experience-list > *:hover {
+  transform: translateY(-5px);
+}
+
+/* First experience card background image */
+
+.experience-list > *:first-child,
+.experience-card:first-child {
+  background-image:
+    linear-gradient(
+      rgba(5, 17, 31, 0.78),
+      rgba(5, 17, 31, 0.91)
+    ),
+    url('../assets/images/mybgimage.jpeg');
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* Experience category */
+
+.experience-category {
+  color: #8dbaff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+/* Experience title */
+
+.experience-card h3,
+.experience-list h3 {
+  color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Organization */
+
+.experience-card h4,
+.experience-list h4 {
+  color: #8dbaff;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+/* Description */
+
+.experience-card p,
+.experience-list p {
+  color: #d0dbe9;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* =========================================
+   EXPERIENCE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 750px) {
+  .experience-list {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card,
+  .experience-list > * {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-card,
+  .experience-list > * {
+    padding: 23px;
+  }
+}

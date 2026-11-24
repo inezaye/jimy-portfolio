@@ -1,0 +1,154 @@
+
+/* =========================================
+   PROJECTS SECTION
+========================================= */
+
+.projects {
+  background: transparent;
+  position: relative;
+}
+
+.projects-container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.projects-heading {
+  margin-bottom: 45px;
+}
+
+.projects-heading h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(30px, 4vw, 43px);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+/* Projects grid */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Project cards */
+
+.project-card,
+.projects-grid > * {
+  min-width: 0;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  padding: 28px;
+  border-radius: 13px;
+  background: rgba(7, 19, 34, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover,
+.projects-grid > *:hover {
+  transform: translateY(-5px);
+}
+
+/* First project card background image */
+
+.projects-grid > *:first-child,
+.project-card:first-child {
+  background-image:
+    linear-gradient(
+      rgba(5, 17, 31, 0.78),
+      rgba(5, 17, 31, 0.91)
+    ),
+    url('../assets/images/mybgimage.jpeg');
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* Project category */
+
+.project-category {
+  color: #8dbaff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+/* Project title */
+
+.project-card h3,
+.projects-grid h3 {
+  color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Project description */
+
+.project-card p,
+.projects-grid p {
+  color: #d0dbe9;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* Project technologies */
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.project-tags span {
+  padding: 7px 10px;
+  border-radius: 5px;
+  color: #d4e4f9;
+  background: rgba(57, 127, 224, 0.2);
+  border: 1px solid rgba(100, 160, 245, 0.22);
+  font-size: 10px;
+}
+
+/* Project status */
+
+.project-status {
+  display: inline-block;
+  margin-top: 20px;
+  color: #9dc4ff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================================
+   PROJECTS RESPONSIVENESS
+========================================= */
+
+@media (max-width: 750px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card,
+  .projects-grid > * {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card,
+  .projects-grid > * {
+    padding: 23px;
+  }
+
+  .project-card h3,
+  .projects-grid h3 {
+    font-size: 19px;
+  }
+}

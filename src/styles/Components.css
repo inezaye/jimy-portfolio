@@ -1,0 +1,95 @@
+
+/* =================================
+   SHARED SECTION STYLES
+================================= */
+
+.section {
+  width: 100%;
+  padding: 100px 6%;
+}
+
+.section-container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* =================================
+   SECTION HEADINGS
+================================= */
+
+.section-eyebrow {
+  color: #397bea;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.section-heading {
+  font-family: 'Manrope', sans-serif;
+  color: #101f32;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.heading-line {
+  width: 55px;
+  height: 4px;
+  background: #397bea;
+  border-radius: 5px;
+  margin-top: 18px;
+}
+
+/* =================================
+   SHARED BUTTONS
+================================= */
+
+.btn {
+  min-height: 46px;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #397bea;
+  color: #ffffff;
+  border: 1px solid #397bea;
+}
+
+.btn-primary:hover {
+  background: #2563d8;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #101f32;
+  border: 1px solid #101f32;
+}
+
+.btn-outline:hover {
+  background: #101f32;
+  color: #ffffff;
+}
+
+/* =================================
+   SHARED RESPONSIVE SPACING
+================================= */
+
+@media (max-width: 700px) {
+  .section {
+    padding: 75px 5%;
+  }
+}
